@@ -12,7 +12,7 @@
 
 [![YouTube](https://img.youtube.com/vi/QL_gajP8hvM/0.jpg)](https://www.youtube.com/watch?v=QL_gajP8hvM)
 
-## [Adding Entity Framework to IdentityServer](./adding-entity-framework-to-identityserver)
+## [Adding Entity Framework Core to IdentityServer](./adding-entity-framework-core-to-identityserver)
 
 [![YouTube](https://img.youtube.com/vi/C0d9AnI__ZA/0.jpg)](https://www.youtube.com/watch?v=C0d9AnI__ZA)
 
