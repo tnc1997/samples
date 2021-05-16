@@ -1,0 +1,8 @@
+# Adding Policy-Based Authorisation to an ASP.NET Core API
+
+## Getting Started
+
+1. `openssl req -x509 -newkey rsa:4096 -keyout localhost.key -out localhost.crt -subj "/CN=localhost" -addext "subjectAltName=DNS:localhost,DNS:api,DNS:identityserver"`
+1. `openssl pkcs12 -export -in localhost.crt -inkey localhost.key -out localhost.pfx -name "Adding Policy-Based Authorisation to an ASP.NET Core API"`
+1. `certutil -f -user -importpfx Root localhost.pfx`
+1. `docker compose up --build`

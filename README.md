@@ -20,7 +20,7 @@
 
 [![YouTube](https://img.youtube.com/vi/U1b9TkkbALo/0.jpg)](https://www.youtube.com/watch?v=U1b9TkkbALo)
 
-## [Adding Policy-Based Authorisation to an API](./adding-policy-based-authorisation-to-an-api)
+## [Adding Policy-Based Authorisation to an ASP.NET Core API](./adding-policy-based-authorisation-to-an-aspnet-core-api)
 
 [![YouTube](https://img.youtube.com/vi/0gMNxDCw-Jw/0.jpg)](https://www.youtube.com/watch?v=0gMNxDCw-Jw)
 
