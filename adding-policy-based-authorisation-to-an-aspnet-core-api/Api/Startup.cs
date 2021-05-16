@@ -31,7 +31,11 @@ namespace Api
                 .AddJwtBearer(options =>
                 {
                     options.Authority = Configuration["Authentication:Authority"];
-                    options.Audience = "api";
+
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateAudience = false
+                    };
                 });
             services.AddAuthorization(options =>
             {
