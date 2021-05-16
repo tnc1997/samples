@@ -24,10 +24,7 @@ services:
       - identityserver
     entrypoint: /bin/sh -c "update-ca-certificates && dotnet ConsoleApplication.dll"
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
-      - ASPNETCORE_Kestrel__Certificates__Default__Password=password
-      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/localhost.pfx
+      - DOTNET_ENVIRONMENT=Development
       - API_URL=https://api
       - AUTHENTICATION__AUTHORITY=https://identityserver
     volumes:
