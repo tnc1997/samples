@@ -22,7 +22,7 @@ services:
     depends_on:
       - api
       - identityserver
-    entrypoint: /bin/sh -c "update-ca-certificates && dotnet ConsoleApplication.dll"
+    entrypoint: /bin/sh -c "sleep 10 && update-ca-certificates && dotnet ConsoleApplication.dll"
     environment:
       - DOTNET_ENVIRONMENT=Development
       - API_URL=https://api
