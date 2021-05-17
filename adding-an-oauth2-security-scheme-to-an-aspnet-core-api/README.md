@@ -1,11 +1,11 @@
-# Adding an OAuth 2.0 Security Scheme to an API
+# Adding an OAuth 2.0 Security Scheme to an ASP.NET Core API
 
 1. Generate a self-signed certificate.
     ```shell
     openssl req -x509 -newkey rsa:4096 -keyout localhost.key -out localhost.crt -subj "/CN=localhost" -addext "subjectAltName=DNS:localhost,DNS:api,DNS:identityserver"
     ```
     ```shell
-    openssl pkcs12 -export -in localhost.crt -inkey localhost.key -out localhost.pfx -name "Adding an OAuth 2.0 Security Scheme to an API"
+    openssl pkcs12 -export -in localhost.crt -inkey localhost.key -out localhost.pfx -name "Adding an OAuth 2.0 Security Scheme to an ASP.NET Core API"
     ```
 1. Import the self-signed certificate.
     ```shell

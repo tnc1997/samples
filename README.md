@@ -1,6 +1,6 @@
 # Samples
 
-## [Adding an OAuth 2.0 Security Scheme to an API](./adding-an-oauth2-security-scheme-to-an-api)
+## [Adding an OAuth 2.0 Security Scheme to an ASP.NET Core API](./adding-an-oauth2-security-scheme-to-an-aspnet-core-api)
 
 [![YouTube](https://img.youtube.com/vi/eE_X8Y180zs/0.jpg)](https://www.youtube.com/watch?v=eE_X8Y180zs)
 
