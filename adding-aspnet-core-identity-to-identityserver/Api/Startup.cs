@@ -36,7 +36,7 @@ namespace Api
                     {
                         ClientCredentials = new OpenApiOAuthFlow
                         {
-                            TokenUrl = new Uri("https://localhost:5001/connect/token"),
+                            TokenUrl = new Uri($"{Configuration["Authentication:Authority"]}/connect/token"),
                             Scopes = new Dictionary<string, string>
                             {
                                 {"api", "API"}
