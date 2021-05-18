@@ -1,8 +1,4 @@
-using System.Collections.Generic;
-using System.Linq;
 using Duende.IdentityServer.EntityFramework.DbContexts;
-using Duende.IdentityServer.EntityFramework.Mappers;
-using Duende.IdentityServer.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,33 +22,6 @@ namespace IdentityServer
                 using (var configurationDbContext = scope.ServiceProvider.GetRequiredService<ConfigurationDbContext>())
                 {
                     configurationDbContext.Database.Migrate();
-
-                    if (!configurationDbContext.Clients.Any())
-                    {
-                        configurationDbContext.Clients.Add(new Client
-                        {
-                            ClientId = "console",
-                            ClientSecrets = new List<Secret> {new("secret".Sha256())},
-                            AllowedGrantTypes = GrantTypes.ClientCredentials,
-                            AllowedScopes = new List<string> {"api"}
-                        }.ToEntity());
-                        configurationDbContext.SaveChanges();
-                    }
-
-                    if (!configurationDbContext.ApiScopes.Any())
-                    {
-                        configurationDbContext.ApiScopes.Add(new ApiScope("api").ToEntity());
-                        configurationDbContext.SaveChanges();
-                    }
-
-                    if (!configurationDbContext.ApiResources.Any())
-                    {
-                        configurationDbContext.ApiResources.Add(new ApiResource("api")
-                        {
-                            Scopes = new List<string> {"api"}
-                        }.ToEntity());
-                        configurationDbContext.SaveChanges();
-                    }
                 }
             }
 
