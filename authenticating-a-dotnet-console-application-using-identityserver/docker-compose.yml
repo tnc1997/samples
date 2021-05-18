@@ -7,13 +7,13 @@ services:
     entrypoint: /bin/sh -c "update-ca-certificates && dotnet Api.dll"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_URLS=https://+:5003;http://+:5002
       - ASPNETCORE_Kestrel__Certificates__Default__Password=password
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/localhost.pfx
-      - AUTHENTICATION__AUTHORITY=https://identityserver
+      - AUTHENTICATION__AUTHORITY=https://identityserver:5001
     ports:
-      - "5002:80"
-      - "5003:443"
+      - "5002:5002"
+      - "5003:5003"
     volumes:
       - ./localhost.pfx:/https/localhost.pfx:ro
       - ./localhost.crt:/usr/local/share/ca-certificates/localhost.crt:ro
@@ -25,8 +25,8 @@ services:
     entrypoint: /bin/sh -c "sleep 10 && update-ca-certificates && dotnet ConsoleApplication.dll"
     environment:
       - DOTNET_ENVIRONMENT=Development
-      - API_URL=https://api
-      - AUTHENTICATION__AUTHORITY=https://identityserver
+      - API_URL=https://api:5003
+      - AUTHENTICATION__AUTHORITY=https://identityserver:5001
     volumes:
       - ./localhost.pfx:/https/localhost.pfx:ro
       - ./localhost.crt:/usr/local/share/ca-certificates/localhost.crt:ro
@@ -35,12 +35,12 @@ services:
     entrypoint: /bin/sh -c "update-ca-certificates && dotnet IdentityServer.dll"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_URLS=https://+:5001;http://+:5000
       - ASPNETCORE_Kestrel__Certificates__Default__Password=password
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/localhost.pfx
     ports:
-      - "5000:80"
-      - "5001:443"
+      - "5000:5000"
+      - "5001:5001"
     volumes:
       - ./localhost.pfx:/https/localhost.pfx:ro
       - ./localhost.crt:/usr/local/share/ca-certificates/localhost.crt:ro
