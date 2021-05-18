@@ -29,3 +29,5 @@
 ## [Containerising a PostgreSQL Database](./containerising-a-postgresql-database)
 
 ## [Creating an IdentityServer Project](./creating-an-identityserver-project)
+
+## [Seeding an ASP.NET Core Identity Database with Users](./seeding-an-aspnet-core-identity-database-with-users)
