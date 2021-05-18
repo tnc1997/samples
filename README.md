@@ -24,8 +24,6 @@
 
 ## [Authenticating an ASP.NET Core Web Application using IdentityServer](./authenticating-an-aspnet-core-web-application-using-identityserver)
 
-[![YouTube](https://img.youtube.com/vi/BlJd_LG_LC8/0.jpg)](https://www.youtube.com/watch?v=BlJd_LG_LC8)
-
 ## [Containerising a PostgreSQL Database](./containerising-a-postgresql-database)
 
 ## [Creating an IdentityServer Project](./creating-an-identityserver-project)
