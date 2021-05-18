@@ -1,5 +1,9 @@
 # Adding an OAuth 2.0 Security Scheme to an ASP.NET Core API
 
+[![YouTube](https://img.youtube.com/vi/eE_X8Y180zs/0.jpg)](https://www.youtube.com/watch?v=eE_X8Y180zs)
+
+## Getting Started
+
 1. Generate a self-signed certificate.
     ```shell
     openssl req -x509 -newkey rsa:4096 -keyout localhost.key -out localhost.crt -subj "/CN=localhost" -addext "subjectAltName=DNS:localhost,DNS:api,DNS:identityserver"
