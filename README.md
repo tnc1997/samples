@@ -20,8 +20,6 @@
 
 ## [Authenticating an Angular Single-Page Application using IdentityServer](./authenticating-an-angular-single-page-application-using-identityserver)
 
-[![YouTube](https://img.youtube.com/vi/cJ1qVngqk5U/0.jpg)](https://www.youtube.com/watch?v=cJ1qVngqk5U)
-
 ## [Authenticating an ASP.NET Core Web Application using IdentityServer](./authenticating-an-aspnet-core-web-application-using-identityserver)
 
 ## [Containerising a PostgreSQL Database](./containerising-a-postgresql-database)
