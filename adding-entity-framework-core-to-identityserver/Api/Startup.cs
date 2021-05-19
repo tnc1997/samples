@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
 
 namespace Api
 {
@@ -21,11 +20,6 @@ namespace Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
-            services.AddSwaggerGen(options =>
-            {
-                options.SwaggerDoc("v1", new OpenApiInfo {Title = "Api", Version = "v1"});
-            });
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
@@ -57,8 +51,6 @@ namespace Api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/v1/swagger.json", "Api v1"));
             }
 
             app.UseHttpsRedirection();
