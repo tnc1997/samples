@@ -5,6 +5,7 @@ using Duende.IdentityServer.EntityFramework.Mappers;
 using Duende.IdentityServer.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -18,6 +19,8 @@ namespace IdentityServer
 
             using (var scope = builder.Services.GetRequiredService<IServiceScopeFactory>().CreateScope())
             {
+                var configuration = scope.ServiceProvider.GetRequiredService<IConfiguration>();
+
                 using (var persistedGrantDbContext = scope.ServiceProvider.GetRequiredService<PersistedGrantDbContext>())
                 {
                     persistedGrantDbContext.Database.Migrate();
@@ -39,7 +42,7 @@ namespace IdentityServer
                         configurationDbContext.Clients.Add(new Client
                         {
                             ClientId = "swagger",
-                            AllowedCorsOrigins = new List<string> {"http://api:5002", "https://api:5003"}
+                            AllowedCorsOrigins = new List<string> {configuration["ApiUrl"]}
                         }.ToEntity());
                         configurationDbContext.SaveChanges();
                     }

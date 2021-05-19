@@ -35,6 +35,7 @@ services:
       - ASPNETCORE_URLS=https://+:5001;http://+:5000
       - ASPNETCORE_Kestrel__Certificates__Default__Password=password
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/localhost.pfx
+      - APIURL=https://api:5003
       - CONNECTIONSTRINGS__DEFAULTCONNECTION=Server=db;Port=5432;Database=identityserver;User Id=postgres;Password=password;
     ports:
       - "5000:5000"
