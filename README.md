@@ -16,8 +16,6 @@
 
 ## [Authenticating a Flutter Android Application using IdentityServer](./authenticating-a-flutter-android-application-using-identityserver)
 
-[![YouTube](https://img.youtube.com/vi/Qai1AKptnZo/0.jpg)](https://www.youtube.com/watch?v=Qai1AKptnZo)
-
 ## [Authenticating an Angular Single-Page Application using IdentityServer](./authenticating-an-angular-single-page-application-using-identityserver)
 
 ## [Authenticating an ASP.NET Core Web Application using IdentityServer](./authenticating-an-aspnet-core-web-application-using-identityserver)
