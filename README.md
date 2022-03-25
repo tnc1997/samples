@@ -1,29 +1,29 @@
 # Samples
 
-## [Adding an OAuth 2.0 Security Scheme to an ASP.NET Core API](./adding-an-oauth2-security-scheme-to-an-aspnet-core-api)
+## [Adding an OAuth 2.0 Security Scheme to an ASP.NET Core 5 API](./adding-an-oauth-2-security-scheme-to-an-aspnet-core-5-api)
 
-## [Adding API Resources to IdentityServer](./adding-api-resources-to-identityserver)
+## [Adding API Resources to IdentityServer 5](./adding-api-resources-to-identityserver-5)
 
-## [Adding ASP.NET Core Identity to IdentityServer](./adding-aspnet-core-identity-to-identityserver)
+## [Adding ASP.NET Core 5 Identity to IdentityServer 5](./adding-aspnet-core-5-identity-to-identityserver-5)
 
-## [Adding Entity Framework Core to IdentityServer](./adding-entity-framework-core-to-identityserver)
+## [Adding Entity Framework Core 5 to IdentityServer 5](./adding-entity-framework-core-5-to-identityserver-5)
 
-## [Adding JWT Bearer Authentication to an ASP.NET Core API](./adding-jwt-bearer-authentication-to-an-aspnet-core-api)
+## [Adding JWT Bearer Authentication to an ASP.NET Core 5 API](./adding-jwt-bearer-authentication-to-an-aspnet-core-5-api)
 
-## [Adding Policy-Based Authorisation to an ASP.NET Core API](./adding-policy-based-authorisation-to-an-aspnet-core-api)
+## [Adding Policy-Based Authorisation to an ASP.NET Core 5 API](./adding-policy-based-authorisation-to-an-aspnet-core-5-api)
 
-## [Authenticating a .NET Console Application using IdentityServer](./authenticating-a-dotnet-console-application-using-identityserver)
+## [Authenticating a .NET 5 Console Application using IdentityServer 5](./authenticating-a-dotnet-5-console-application-using-identityserver-5)
 
-## [Authenticating a Flutter Android Application using IdentityServer](./authenticating-a-flutter-android-application-using-identityserver)
+## [Authenticating a Flutter Android Application using IdentityServer 5](./authenticating-a-flutter-android-application-using-identityserver-5)
 
-## [Authenticating an Angular Single-Page Application using IdentityServer](./authenticating-an-angular-single-page-application-using-identityserver)
+## [Authenticating an Angular 11 Single-Page Application using IdentityServer 5](./authenticating-an-angular-11-single-page-application-using-identityserver-5)
 
-## [Authenticating an ASP.NET Core Web Application using IdentityServer](./authenticating-an-aspnet-core-web-application-using-identityserver)
+## [Authenticating an ASP.NET Core 5 Web Application using IdentityServer 5](./authenticating-an-aspnet-core-5-web-application-using-identityserver-5)
 
-## [Containerising a PostgreSQL Database](./containerising-a-postgresql-database)
+## [Containerising a PostgreSQL 13 Database](./containerising-a-postgresql-13-database)
 
-## [Creating an IdentityServer Project](./creating-an-identityserver-project)
+## [Creating an IdentityServer 5 Project](./creating-an-identityserver-5-project)
 
 ## [Flutter State Management using Inherited Notifiers](./flutter-state-management-using-inherited-notifiers)
 
-## [Seeding an ASP.NET Core Identity Database with Users](./seeding-an-aspnet-core-identity-database-with-users)
+## [Seeding an ASP.NET Core 5 Identity Database with Users](./seeding-an-aspnet-core-5-identity-database-with-users)
