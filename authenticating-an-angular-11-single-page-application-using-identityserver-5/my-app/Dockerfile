@@ -1,7 +1,7 @@
-FROM node:16 as build
+FROM node:12 as build
 WORKDIR /src
-COPY "package.json" "package.json"
-RUN npm install --legacy-peer-deps
+COPY ["package.json", "package-lock.json", "./"]
+RUN npm ci
 COPY . .
 RUN npm run build
 
