@@ -26,7 +26,7 @@ services:
     depends_on:
       - api
       - identityserver
-    entrypoint: /bin/sh -c "update-ca-certificates && dotnet ConsoleApplication.dll"
+    entrypoint: /bin/sh -c "sleep 30 && update-ca-certificates && dotnet ConsoleApplication.dll"
     environment:
       - AUTHENTICATION__AUTHORITY=https://identityserver:7000
       - AUTHENTICATION__CLIENTID=b4e758d2-f13d-4a1e-bf38-cc88f4e290e1
