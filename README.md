@@ -24,6 +24,8 @@
 
 ## [Creating an IdentityServer 5 Project](./creating-an-identityserver-5-project)
 
+## [Creating an IdentityServer 6 Solution](./creating-an-identityserver-6-solution)
+
 ## [Flutter State Management using Inherited Notifiers](./flutter-state-management-using-inherited-notifiers)
 
 ## [Seeding an ASP.NET Core 5 Identity Database with Users](./seeding-an-aspnet-core-5-identity-database-with-users)
