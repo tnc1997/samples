@@ -8,6 +8,8 @@
 
 ## [Adding Entity Framework Core 5 to IdentityServer 5](./adding-entity-framework-core-5-to-identityserver-5)
 
+## [Adding JWT Bearer Authentication to a Hot Chocolate 12 GraphQL API](./adding-jwt-bearer-authentication-to-a-hot-chocolate-12-graphql-api)
+
 ## [Adding JWT Bearer Authentication to an ASP.NET Core 5 API](./adding-jwt-bearer-authentication-to-an-aspnet-core-5-api)
 
 ## [Adding Policy-Based Authorisation to an ASP.NET Core 5 API](./adding-policy-based-authorisation-to-an-aspnet-core-5-api)
