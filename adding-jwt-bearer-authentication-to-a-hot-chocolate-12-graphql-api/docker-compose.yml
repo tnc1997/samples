@@ -1,0 +1,50 @@
+version: "3.9"
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./Api/Dockerfile
+    depends_on:
+      - identityserver
+    entrypoint: /bin/sh -c "update-ca-certificates && dotnet Api.dll"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:7001
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=password
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/localhost.pfx
+      - AUTHENTICATION__AUTHORITY=https://identityserver:7000
+      - AUTHENTICATION__AUDIENCE=668ed607-34cd-469b-8339-ac3c7a3dc6a2
+    ports:
+      - "7001:7001"
+    volumes:
+      - ./localhost.pfx:/https/localhost.pfx:ro
+      - ./localhost.crt:/usr/local/share/ca-certificates/localhost.crt:ro
+  db:
+    environment:
+      - POSTGRES_PASSWORD=password
+    image: postgres:14
+    ports:
+      - "5432:5432"
+    volumes:
+      - db:/var/lib/postgresql/data
+  identityserver:
+    build:
+      context: .
+      dockerfile: ./IdentityServer/Dockerfile
+    depends_on:
+      - db
+    entrypoint: /bin/sh -c "update-ca-certificates && dotnet IdentityServer.dll"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:7000
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=password
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/localhost.pfx
+      - CONNECTIONSTRINGS__IDENTITY=Server=db;Port=5432;Database=identity;User Id=postgres;Password=password;
+      - CONNECTIONSTRINGS__IDENTITYSERVER=Server=db;Port=5432;Database=identityserver;User Id=postgres;Password=password;
+    ports:
+      - "7000:7000"
+    volumes:
+      - ./localhost.pfx:/https/localhost.pfx:ro
+      - ./localhost.crt:/usr/local/share/ca-certificates/localhost.crt:ro
+volumes:
+  db:
