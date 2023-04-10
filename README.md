@@ -14,6 +14,8 @@
 
 ## [Adding JWT Bearer Authentication to an ASP.NET Core 5 API](./adding-jwt-bearer-authentication-to-an-aspnet-core-5-api)
 
+## [Adding Mutations to a Hot Chocolate 13 GraphQL API](./adding-mutations-to-a-hot-chocolate-13-graphql-api)
+
 ## [Adding Policy-Based Authorisation to an ASP.NET Core 5 API](./adding-policy-based-authorisation-to-an-aspnet-core-5-api)
 
 ## [Authenticating a .NET 5 Console Application using IdentityServer 5](./authenticating-a-dotnet-5-console-application-using-identityserver-5)
@@ -26,10 +28,14 @@
 
 ## [Containerising a PostgreSQL 13 Database](./containerising-a-postgresql-13-database)
 
+## [Creating a Hot Chocolate 13 GraphQL API](./creating-a-hot-chocolate-13-graphql-api)
+
 ## [Creating an IdentityServer 5 Project](./creating-an-identityserver-5-project)
 
 ## [Creating an IdentityServer 6 Solution](./creating-an-identityserver-6-solution)
 
 ## [Flutter State Management using Inherited Notifiers](./flutter-state-management-using-inherited-notifiers)
+
+## [Integrating Entity Framework Core 7 with a Hot Chocolate 13 GraphQL API](./integrating-entity-framework-core-7-with-a-hot-chocolate-13-graphql-api)
 
 ## [Seeding an ASP.NET Core 5 Identity Database with Users](./seeding-an-aspnet-core-5-identity-database-with-users)
