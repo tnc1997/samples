@@ -40,6 +40,8 @@
 
 ## [Creating an IdentityServer 6 Solution](./creating-an-identityserver-6-solution)
 
+## [Extending Types in a Hot Chocolate 13 GraphQL API](./extending-types-in-a-hot-chocolate-13-graphql-api)
+
 ## [Flutter State Management using Inherited Notifiers](./flutter-state-management-using-inherited-notifiers)
 
 ## [Integrating Entity Framework Core 7 with a Hot Chocolate 13 GraphQL API](./integrating-entity-framework-core-7-with-a-hot-chocolate-13-graphql-api)
