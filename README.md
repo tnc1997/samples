@@ -20,6 +20,8 @@
 
 ## [Adding Policy-Based Authorisation to an ASP.NET Core 5 API](./adding-policy-based-authorisation-to-an-aspnet-core-5-api)
 
+## [Adding Projections to a Hot Chocolate 13 GraphQL API](./adding-projections-to-a-hot-chocolate-13-graphql-api)
+
 ## [Adding Sorting to a Hot Chocolate 13 GraphQL API](./adding-sorting-to-a-hot-chocolate-13-graphql-api)
 
 ## [Authenticating a .NET 5 Console Application using IdentityServer 5](./authenticating-a-dotnet-5-console-application-using-identityserver-5)
