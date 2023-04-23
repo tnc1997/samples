@@ -8,6 +8,8 @@
 
 ## [Adding ASP.NET Core 5 Identity to IdentityServer 5](./adding-aspnet-core-5-identity-to-identityserver-5)
 
+## [Adding Data Loaders to a Hot Chocolate 13 GraphQL API](./adding-data-loaders-to-a-hot-chocolate-13-graphql-api)
+
 ## [Adding Entity Framework Core 5 to IdentityServer 5](./adding-entity-framework-core-5-to-identityserver-5)
 
 ## [Adding Filtering to a Hot Chocolate 13 GraphQL API](./adding-filtering-to-a-hot-chocolate-13-graphql-api)
