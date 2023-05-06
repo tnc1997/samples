@@ -42,6 +42,8 @@
 
 ## [Creating an IdentityServer 6 Solution](./creating-an-identityserver-6-solution)
 
+## [Enabling Batching in a Hot Chocolate 13 GraphQL API](./enabling-batching-in-a-hot-chocolate-13-graphql-api)
+
 ## [Extending Types in a Hot Chocolate 13 GraphQL API](./extending-types-in-a-hot-chocolate-13-graphql-api)
 
 ## [Flutter State Management using Inherited Notifiers](./flutter-state-management-using-inherited-notifiers)
