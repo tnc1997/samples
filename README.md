@@ -26,6 +26,8 @@
 
 ## [Adding Sorting to a Hot Chocolate 13 GraphQL API](./adding-sorting-to-a-hot-chocolate-13-graphql-api)
 
+## [Adding the Export Directive to a Hot Chocolate 13 GraphQL API](./adding-the-export-directive-to-a-hot-chocolate-13-graphql-api)
+
 ## [Authenticating a .NET 5 Console Application using IdentityServer 5](./authenticating-a-dotnet-5-console-application-using-identityserver-5)
 
 ## [Authenticating a Flutter Android Application using IdentityServer 5](./authenticating-a-flutter-android-application-using-identityserver-5)
