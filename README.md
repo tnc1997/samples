@@ -18,6 +18,8 @@
 
 ## [Adding JWT Bearer Authentication to an ASP.NET Core 5 API](./adding-jwt-bearer-authentication-to-an-aspnet-core-5-api)
 
+## [Adding Multitenancy to an ASP.NET Core 6 Application](./adding-multitenancy-to-an-aspnet-core-6-application)
+
 ## [Adding Mutations to a Hot Chocolate 13 GraphQL API](./adding-mutations-to-a-hot-chocolate-13-graphql-api)
 
 ## [Adding Policy-Based Authorisation to an ASP.NET Core 5 API](./adding-policy-based-authorisation-to-an-aspnet-core-5-api)

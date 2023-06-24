@@ -1,0 +1,17 @@
+﻿services: 
+  application:
+    build:
+      context: .
+      dockerfile: ./Application/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - VIRTUAL_HOST=*.example.local
+  proxy:
+    image: nginxproxy/nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./example.local.crt:/etc/nginx/certs/example.local.crt:ro
+      - ./example.local.key:/etc/nginx/certs/example.local.key:ro
