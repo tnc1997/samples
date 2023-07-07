@@ -1,0 +1,31 @@
+﻿services: 
+  api:
+    build:
+      context: .
+      dockerfile: ./Api/Dockerfile
+    depends_on: 
+      - db
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Finbuckle__MultiTenant__Stores__ConfigurationStore__Tenants__0__ConnectionString=Server=db;Port=5432;Database=one;User Id=postgres;Password=password;
+      - Finbuckle__MultiTenant__Stores__ConfigurationStore__Tenants__1__ConnectionString=Server=db;Port=5432;Database=two;User Id=postgres;Password=password;
+      - VIRTUAL_HOST=*.example.local
+  db:
+    environment:
+      - POSTGRES_PASSWORD=password
+    image: postgres:15
+    ports:
+      - "5432:5432"
+    volumes:
+      - db:/var/lib/postgresql/data
+  proxy:
+    image: nginxproxy/nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./example.local.crt:/etc/nginx/certs/example.local.crt:ro
+      - ./example.local.key:/etc/nginx/certs/example.local.key:ro
+volumes:
+  db:
