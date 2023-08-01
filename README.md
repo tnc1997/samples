@@ -1,5 +1,7 @@
 # Samples
 
+## [Adding a React 18 User Interface to IdentityServer 6](./adding-a-react-18-user-interface-to-identityserver-6)
+
 ## [Adding an Angular 14 User Interface to IdentityServer 6](./adding-an-angular-14-user-interface-to-identityserver-6)
 
 ## [Adding an OAuth 2.0 Security Scheme to an ASP.NET Core 5 API](./adding-an-oauth-2-security-scheme-to-an-aspnet-core-5-api)

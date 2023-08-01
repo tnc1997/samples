@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.Bff", "IdentityServer.Bff\IdentityServer.Bff.csproj", "{395FF4D1-B7EA-409B-9F72-7A09B61268D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{3491A40A-16E7-4CAC-8B49-CE31CDA3019D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{395FF4D1-B7EA-409B-9F72-7A09B61268D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{395FF4D1-B7EA-409B-9F72-7A09B61268D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{395FF4D1-B7EA-409B-9F72-7A09B61268D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{395FF4D1-B7EA-409B-9F72-7A09B61268D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3491A40A-16E7-4CAC-8B49-CE31CDA3019D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3491A40A-16E7-4CAC-8B49-CE31CDA3019D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3491A40A-16E7-4CAC-8B49-CE31CDA3019D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3491A40A-16E7-4CAC-8B49-CE31CDA3019D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
