@@ -6,7 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Duende.IdentityServer.EntityFramework" Version="5.1.1" />
+        <PackageReference Include="Duende.IdentityServer.EntityFramework" Version="5.2.4" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.6">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
