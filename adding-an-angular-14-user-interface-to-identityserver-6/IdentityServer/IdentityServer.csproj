@@ -11,9 +11,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Duende.IdentityServer" Version="6.0.5"/>
-    <PackageReference Include="Duende.IdentityServer.AspNetIdentity" Version="6.0.4"/>
-    <PackageReference Include="Duende.IdentityServer.EntityFramework" Version="6.0.4"/>
+    <PackageReference Include="Duende.IdentityServer" Version="6.3.10"/>
+    <PackageReference Include="Duende.IdentityServer.AspNetIdentity" Version="6.3.10"/>
+    <PackageReference Include="Duende.IdentityServer.EntityFramework" Version="6.3.10"/>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.5"/>
     <PackageReference Include="Microsoft.AspNetCore.SpaProxy" Version="6.0.5"/>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.5">

@@ -369,8 +369,17 @@ namespace IdentityServer.Data.Migrations.IdentityServer.ConfigurationDb
                     b.Property<int?>("ConsentLifetime")
                         .HasColumnType("integer");
 
+                    b.Property<bool?>("CoordinateLifetimeWithUserSession")
+                        .HasColumnType("boolean");
+
                     b.Property<DateTime>("Created")
                         .HasColumnType("timestamp with time zone");
+
+                    b.Property<TimeSpan>("DPoPClockSkew")
+                        .HasColumnType("interval");
+
+                    b.Property<int>("DPoPValidationMode")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Description")
                         .HasMaxLength(1000)
@@ -397,6 +406,10 @@ namespace IdentityServer.Data.Migrations.IdentityServer.ConfigurationDb
 
                     b.Property<bool>("IncludeJwtId")
                         .HasColumnType("boolean");
+
+                    b.Property<string>("InitiateLoginUri")
+                        .HasMaxLength(2000)
+                        .HasColumnType("character varying(2000)");
 
                     b.Property<DateTime?>("LastAccessed")
                         .HasColumnType("timestamp with time zone");
@@ -430,6 +443,9 @@ namespace IdentityServer.Data.Migrations.IdentityServer.ConfigurationDb
                         .HasColumnType("boolean");
 
                     b.Property<bool>("RequireConsent")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("RequireDPoP")
                         .HasColumnType("boolean");
 
                     b.Property<bool>("RequirePkce")
