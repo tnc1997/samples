@@ -4,7 +4,8 @@
       context: .
       dockerfile: ./Api/Dockerfile
     depends_on: 
-      - db
+      db:
+        condition: service_healthy
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - Finbuckle__MultiTenant__Stores__ConfigurationStore__Tenants__0__ConnectionString=Server=db;Port=5432;Database=one;User Id=postgres;Password=password;
@@ -13,6 +14,11 @@
   db:
     environment:
       - POSTGRES_PASSWORD=password
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 1s
+      timeout: 5s
+      retries: 10
     image: postgres:15
     ports:
       - "5432:5432"

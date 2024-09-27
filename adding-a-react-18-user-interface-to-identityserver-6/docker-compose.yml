@@ -2,6 +2,11 @@ services:
   db:
     environment:
       - POSTGRES_PASSWORD=password
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 1s
+      timeout: 5s
+      retries: 10
     image: postgres:15
     ports:
       - "5432:5432"
@@ -12,7 +17,8 @@ services:
       context: .
       dockerfile: ./IdentityServer.Bff/Dockerfile
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     entrypoint: /bin/sh -c "update-ca-certificates && dotnet IdentityServer.Bff.dll"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
@@ -31,7 +37,8 @@ services:
       context: .
       dockerfile: ./WebApplication/Dockerfile
     depends_on:
-      - identityserver
+      identityserver:
+        condition: service_started
     entrypoint: /bin/sh -c "update-ca-certificates && dotnet WebApplication.dll"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development

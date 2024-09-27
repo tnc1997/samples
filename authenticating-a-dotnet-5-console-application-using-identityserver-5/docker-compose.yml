@@ -3,7 +3,8 @@ services:
   api:
     build: ./Api
     depends_on:
-      - identityserver
+      identityserver:
+        condition: service_started
     entrypoint: /bin/sh -c "update-ca-certificates && dotnet Api.dll"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
@@ -20,8 +21,10 @@ services:
   consoleapplication:
     build: ./ConsoleApplication
     depends_on:
-      - api
-      - identityserver
+      api:
+        condition: service_started
+      identityserver:
+        condition: service_started
     entrypoint: /bin/sh -c "sleep 10 && update-ca-certificates && dotnet ConsoleApplication.dll"
     environment:
       - DOTNET_ENVIRONMENT=Development

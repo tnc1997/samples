@@ -5,7 +5,8 @@ services:
       context: .
       dockerfile: ./Api/Dockerfile
     depends_on:
-      - identityserver
+      identityserver:
+        condition: service_started
     entrypoint: /bin/sh -c "update-ca-certificates && dotnet Api.dll"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
@@ -22,6 +23,11 @@ services:
   db:
     environment:
       - POSTGRES_PASSWORD=password
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 1s
+      timeout: 5s
+      retries: 10
     image: postgres:14
     ports:
       - "5432:5432"
@@ -32,7 +38,8 @@ services:
       context: .
       dockerfile: ./IdentityServer/Dockerfile
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     entrypoint: /bin/sh -c "update-ca-certificates && dotnet IdentityServer.dll"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development

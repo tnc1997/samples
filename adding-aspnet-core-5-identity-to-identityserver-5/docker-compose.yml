@@ -3,6 +3,11 @@ services:
   db:
     environment:
       - POSTGRES_PASSWORD=password
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 1s
+      timeout: 5s
+      retries: 10
     image: postgres:13
     ports:
       - "5432:5432"
@@ -11,7 +16,8 @@ services:
   identityserver:
     build: ./IdentityServer
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     entrypoint: /bin/sh -c "update-ca-certificates && dotnet IdentityServer.dll"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development

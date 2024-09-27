@@ -5,7 +5,8 @@ services:
       context: .
       dockerfile: ./Api/Dockerfile
     depends_on:
-      - identityserver
+      identityserver:
+        condition: service_started
     entrypoint: /bin/sh -c "update-ca-certificates && dotnet Api.dll"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
@@ -24,8 +25,10 @@ services:
       context: .
       dockerfile: ./ConsoleApplication/Dockerfile
     depends_on:
-      - api
-      - identityserver
+      api:
+        condition: service_started
+      identityserver:
+        condition: service_started
     entrypoint: /bin/sh -c "sleep 30 && update-ca-certificates && dotnet ConsoleApplication.dll"
     environment:
       - AUTHENTICATION__AUTHORITY=https://identityserver:7000
@@ -36,6 +39,11 @@ services:
   db:
     environment:
       - POSTGRES_PASSWORD=password
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 1s
+      timeout: 5s
+      retries: 10
     image: postgres:14
     ports:
       - "5432:5432"
@@ -46,7 +54,8 @@ services:
       context: .
       dockerfile: ./IdentityServer/Dockerfile
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     entrypoint: /bin/sh -c "update-ca-certificates && dotnet IdentityServer.dll"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
@@ -65,8 +74,10 @@ services:
       context: .
       dockerfile: ./SinglePageApplication/Dockerfile
     depends_on:
-      - api
-      - identityserver
+      api:
+        condition: service_started
+      identityserver:
+        condition: service_started
     ports:
       - "7003:7003"
     volumes:
@@ -76,8 +87,10 @@ services:
       context: .
       dockerfile: ./WebApplication/Dockerfile
     depends_on:
-      - api
-      - identityserver
+      api:
+        condition: service_started
+      identityserver:
+        condition: service_started
     entrypoint: /bin/sh -c "update-ca-certificates && dotnet WebApplication.dll"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development

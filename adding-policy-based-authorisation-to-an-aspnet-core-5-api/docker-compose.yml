@@ -3,7 +3,8 @@ services:
   api:
     build: ./Api
     depends_on:
-      - identityserver
+      identityserver:
+        condition: service_started
     entrypoint: /bin/sh -c "update-ca-certificates && dotnet Api.dll"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
