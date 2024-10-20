@@ -14,6 +14,8 @@
 
 ## [Adding Entity Framework Core 5 to IdentityServer 5](./adding-entity-framework-core-5-to-identityserver-5)
 
+## [Adding FIDO2-Related Entities to ASP.NET Core 8 Identity](./adding-fido2-related-entities-to-aspnet-core-8-identity)
+
 ## [Adding Filtering to a Hot Chocolate 13 GraphQL API](./adding-filtering-to-a-hot-chocolate-13-graphql-api)
 
 ## [Adding JWT Bearer Authentication to a Hot Chocolate 12 GraphQL API](./adding-jwt-bearer-authentication-to-a-hot-chocolate-12-graphql-api)
