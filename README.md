@@ -26,6 +26,8 @@
 
 ## [Adding Mutations to a Hot Chocolate 13 GraphQL API](./adding-mutations-to-a-hot-chocolate-13-graphql-api)
 
+## [Adding Passwordless Register to ASP.NET Core 8 Identity using FIDO2](./adding-passwordless-register-to-aspnet-core-8-identity-using-fido2)
+
 ## [Adding Policy-Based Authorisation to an ASP.NET Core 5 API](./adding-policy-based-authorisation-to-an-aspnet-core-5-api)
 
 ## [Adding Projections to a Hot Chocolate 13 GraphQL API](./adding-projections-to-a-hot-chocolate-13-graphql-api)
