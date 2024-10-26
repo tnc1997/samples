@@ -1,0 +1,48 @@
+services:
+  db:
+    environment:
+      - POSTGRES_PASSWORD=password
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 1s
+      timeout: 5s
+      retries: 10
+    image: postgres:17
+    ports:
+      - "5432:5432"
+    volumes:
+      - db:/var/lib/postgresql/data
+  maildev:
+    healthcheck:
+      test: [ "CMD-SHELL", "wget -O - http://127.0.0.1:1080/healthz || exit 1" ]
+      interval: 1s
+      timeout: 5s
+      retries: 10
+    image: maildev/maildev
+    ports:
+      - "1025:1025"
+      - "1080:1080"
+  webapplication:
+    build:
+      context: .
+      dockerfile: ./WebApplication/Dockerfile
+    depends_on:
+      db:
+        condition: service_healthy
+      maildev:
+        condition: service_healthy
+    entrypoint: /bin/sh -c "update-ca-certificates && dotnet WebApplication.dll"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTPS_PORTS=8001
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=password
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/localhost.pfx
+      - ConnectionStrings__DefaultConnection=Server=db;Port=5432;Database=identity;User Id=postgres;Password=password;
+      - Smtp__Host=maildev
+    ports:
+      - "7002:8001"
+    volumes:
+      - ./localhost.pfx:/https/localhost.pfx:ro
+      - ./localhost.crt:/usr/local/share/ca-certificates/localhost.crt:ro
+volumes:
+  db:
