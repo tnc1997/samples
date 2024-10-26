@@ -62,6 +62,8 @@
 
 ## [Implementing Multitenancy in Entity Framework Core 6 using a Database Per-Tenant](./implementing-multitenancy-in-entity-framework-core-6-using-a-database-per-tenant)
 
+## [Implementing the ASP.NET Core 8 Identity Email Sender using MailKit](./implementing-the-aspnet-core-8-identity-email-sender-using-mailkit)
+
 ## [Integrating Entity Framework Core 7 with a Hot Chocolate 13 GraphQL API](./integrating-entity-framework-core-7-with-a-hot-chocolate-13-graphql-api)
 
 ## [Seeding an ASP.NET Core 5 Identity Database with Users](./seeding-an-aspnet-core-5-identity-database-with-users)
