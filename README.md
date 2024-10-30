@@ -16,6 +16,8 @@
 
 ## [Adding FIDO2-Related Entities to ASP.NET Core 8 Identity](./adding-fido2-related-entities-to-aspnet-core-8-identity)
 
+## [Adding FIDO2-Related Mutations to a Hot Chocolate 13 GraphQL API](./adding-fido2-related-mutations-to-a-hot-chocolate-13-graphql-api)
+
 ## [Adding FIDO2-Related Queries to a Hot Chocolate 13 GraphQL API](./adding-fido2-related-queries-to-a-hot-chocolate-13-graphql-api)
 
 ## [Adding Filtering to a Hot Chocolate 13 GraphQL API](./adding-filtering-to-a-hot-chocolate-13-graphql-api)

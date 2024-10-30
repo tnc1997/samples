@@ -1,0 +1,38 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./Api/Dockerfile
+    depends_on:
+      db:
+        condition: service_healthy
+    entrypoint: /bin/sh -c "update-ca-certificates && dotnet Api.dll"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTPS_PORTS=8001
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=password
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/localhost.pfx
+      - ConnectionStrings__DefaultConnection=Server=db;Port=5432;Database=identity;User Id=postgres;Password=password;
+      - Fido2__Origins__0=https://api:7001
+      - Fido2__ServerDomain=api
+      - Fido2__ServerName=api
+    ports:
+      - "7001:8001"
+    volumes:
+      - ./localhost.pfx:/https/localhost.pfx:ro
+      - ./localhost.crt:/usr/local/share/ca-certificates/localhost.crt:ro
+  db:
+    environment:
+      - POSTGRES_PASSWORD=password
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 1s
+      timeout: 5s
+      retries: 10
+    image: postgres:17
+    ports:
+      - "5432:5432"
+    volumes:
+      - db:/var/lib/postgresql/data
+volumes:
+  db:
